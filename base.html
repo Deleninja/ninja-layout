@@ -56,17 +56,7 @@
   .container h2 {
     font-weight:200;
   }
-  
   </style>
-
-<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
-
-
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-
-
 
   <body>
 
@@ -123,13 +113,14 @@
           </div>
         </div> -->
 
-        <div class="row" style="margin-top:80px;">
+        <div class="row" style="margin-top:60px;">
           <div class="col-sm-8 col-md-offset-2">
               <form class="form-inline" method="POST" action"" />
+              <div class="input-group">
                 <div class="form-group form-group-lg">
                   <input type="text" class="form-control" id="searchItem" placeholder="Jeg trenger en...">
                 </div>
-                <div class="form-group form-group-lg" style="margin: 0px;">
+                <div class="form-group form-group-lg">
                   <input type="text" class="form-control" id="date" name="date-start" placeholder="Fra">
                 </div>
                   <div class="form-group form-group-lg">
@@ -138,6 +129,7 @@
                   <div class="form-group form-group-lg">
                     <input type="submit" value="Søk" class="btn btn-danger btn-lg">
                   </div>
+                </div>
               </form>
             </div>
           </div>
@@ -191,10 +183,10 @@
   $(document).ready(function(){
     var date_input_1=$('input[name="date-start"]');
     var date_input_2=$('input[name="date-slutt"]');
-    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    // var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
     date_input_1.datepicker({
       format: 'dd/mm/yyyy',
-      container: container,
+      // container: container,
       todayHighlight: true,
       autoclose: true,
       weekStart: 1,
@@ -202,7 +194,7 @@
     })
     date_input_2.datepicker({
       format: 'dd/mm/yyyy',
-      container: container,
+      // container: container,
       todayHighlight: true,
       autoclose: true,
       weekStart: 1,
