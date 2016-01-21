@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- meta tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favico -->
@@ -14,16 +14,15 @@
 
     <title>Deleninja</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+    <link href="css/jumbotron.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!-- Debugging (delete in prod) -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
 
@@ -34,17 +33,10 @@
     <![endif]-->
 
 
-<!-- bower -->
-  <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
-  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
-
-<!-- /bower -->
-
   </head>
+
+  <!-- Custom ninja-styles --> 
+
 <style>
   .jumbotron {
     background-image: url(
@@ -66,6 +58,7 @@
   }
   
   </style>
+
 
   <body>
 
@@ -103,22 +96,22 @@
     <div class="jumbotron">
       <div class="container text-center">
         <h1>Deleninja</h1>
-        <!-- <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p> -->
-        <p><a class="btn btn-default" href="#" role="button">Slik fungerer det &raquo;</a></p>
+       
+    <p><a class="btn btn-default" href="#" role="button">Slik fungerer det &raquo;</a></p>
+        
         <div class="row" style="margin-top:80px;">
           <div class="col-sm-6 col-md-offset-3">
-     <form class="form-horizontal" method="POST" action="" />
-
-
-<div class="form-group form-group-lg">
-  <div class="input-group">
-    <input class="form-control" type="text" name="text" placeholder="Jeg trenger en..." />
-    <span class="input-group-btn">
-    <input type="submit" value="Søk" class="btn btn-danger btn-lg" />
-    </span>
-</div>
-    </div>
-  </form>
+          <form class="form-horizontal" method="POST" action="" />
+            <div class="form-group form-group-lg">
+              <div class="input-group">
+                <input class="form-control" type="text" name="text" placeholder="Jeg trenger en..." />
+                <span class="input-group-btn">
+                <input type="submit" value="Søk" class="btn btn-danger btn-lg" />
+                </span>
+               
+              </div>
+            </div>
+          </form>
           </div>
         </div>
       </div>
@@ -146,21 +139,80 @@
         </div>
       </div>
 
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+  <div class="row">
+    <div class="container-fluid">
+      <h1>Daterange picker</h1>
+
+      <div class="col-sm-6">
+        <div class="input-daterange input-group">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input class="form-control" id="date" name="date-start" placeholder="DD/MM/ÅÅÅÅÅ" type="text" />
+          <span class="input-group-addon">til</span>
+          <input class="form-control" id="date" name="date-slutt" placeholder="DD/MM/ÅÅÅÅÅ" type="text" />
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
       <hr>
 
       <footer>
         <p>&copy; 2016 Deleninja</p>
       </footer>
-    </div> <!-- /container -->
+
+
+</div> 
+<!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script src="locales/bootstrap-datepicker.no.min.js" charset="UTF-8"></script>
+
+    <script>
+  $(document).ready(function(){
+    var date_input_1=$('input[name="date-start"]');
+    var date_input_2=$('input[name="date-slutt"]');
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input_1.datepicker({
+      format: 'dd/mm/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+      weekStart: 1,
+      language: "no"
+    })
+    date_input_2.datepicker({
+      format: 'dd/mm/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+      weekStart: 1,
+      language: "no"
+    })
+  })
+</script>
+
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
